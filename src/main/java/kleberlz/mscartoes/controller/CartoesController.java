@@ -77,7 +77,6 @@ public class CartoesController {
 				.collect(Collectors.toList());
 		
 		return ResponseEntity.ok(listaDTO);
-		
 	}
 
 }
