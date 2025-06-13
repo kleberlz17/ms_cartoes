@@ -2,16 +2,15 @@ package kleberlz.mscartoes.dto;
 
 import java.math.BigDecimal;
 
-import kleberlz.mscartoes.model.BandeiraCartao;
 
 public class CartaoDTO {
 
 	private String nome;
-	private BandeiraCartao bandeira;
+	private String bandeira;
 	private BigDecimal renda;
 	private BigDecimal limite;
 	
-	public CartaoDTO(String nome, BandeiraCartao bandeira, BigDecimal renda, BigDecimal limite) {
+	public CartaoDTO(String nome, String bandeira, BigDecimal renda, BigDecimal limite) {
 		this.nome = nome;
 		this.bandeira = bandeira;
 		this.renda = renda;
@@ -30,11 +29,11 @@ public class CartaoDTO {
 		this.nome = nome;
 	}
 
-	public BandeiraCartao getBandeira() {
+	public String getBandeira() {
 		return bandeira;
 	}
 
-	public void setBandeira(BandeiraCartao bandeira) {
+	public void setBandeira(String bandeira) {
 		this.bandeira = bandeira;
 	}
 
@@ -53,6 +52,8 @@ public class CartaoDTO {
 	public void setLimite(BigDecimal limite) {
 		this.limite = limite;
 	}
+
+	
 
 	
 	

@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import kleberlz.mscartoes.dto.CartaoDTO;
-import kleberlz.mscartoes.dto.ClienteCartaoDTO;
+import kleberlz.mscartoes.dto.CartaoClienteDTO;
 import kleberlz.mscartoes.mapper.CartaoConverter;
 import kleberlz.mscartoes.mapper.ClienteCartaoConverter;
 import kleberlz.mscartoes.model.Cartao;
@@ -65,14 +65,11 @@ public class CartoesController {
 	}
 	
 	@GetMapping("/cpf/{cpf}")
-	public ResponseEntity<List<ClienteCartaoDTO>> buscarCartoesPorCliente(@PathVariable String cpf) {
+	public ResponseEntity<List<CartaoClienteDTO>> buscarCartoesPorCliente(@PathVariable String cpf) {
 		List<ClienteCartao> listaClienteCartoes = clienteCartaoService.listarCartoesByCpf(cpf);
 		
-		if(listaClienteCartoes.isEmpty()) {
-			return ResponseEntity.notFound().build();
-		}
 		
-		List<ClienteCartaoDTO> listaDTO = listaClienteCartoes.stream()
+		List<CartaoClienteDTO> listaDTO = listaClienteCartoes.stream()
 				.map(clienteCartaoConverter::entidadeParaDTO)
 				.collect(Collectors.toList());
 		

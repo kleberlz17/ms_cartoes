@@ -3,8 +3,6 @@ package kleberlz.mscartoes.model;
 import java.math.BigDecimal;
 
 import jakarta.persistence.Entity;
-import jakarta.persistence.EnumType;
-import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -18,14 +16,14 @@ public class Cartao {
 	
 	private String nome;
 	
-	@Enumerated(EnumType.STRING)
-	private BandeiraCartao bandeira;
+	
+	private String bandeira;
 	
 	private BigDecimal renda;
 	
 	private BigDecimal limiteBasico;
 	
-	public Cartao(String nome, BandeiraCartao bandeira, BigDecimal renda, BigDecimal limiteBasico) {
+	public Cartao(String nome, String bandeira, BigDecimal renda, BigDecimal limiteBasico) {
 		this.nome = nome;
 		this.bandeira = bandeira;
 		this.renda = renda;
@@ -52,11 +50,11 @@ public class Cartao {
 		this.nome = nome;
 	}
 
-	public BandeiraCartao getBandeira() {
+	public String getBandeira() {
 		return bandeira;
 	}
 
-	public void setBandeira(BandeiraCartao bandeira) {
+	public void setBandeira(String bandeira) {
 		this.bandeira = bandeira;
 	}
 
@@ -81,6 +79,7 @@ public class Cartao {
 		return "Cartao [id=" + id + ", nome=" + nome + ", bandeira=" + bandeira + ", renda=" + renda + ", limiteBasico="
 				+ limiteBasico + "]";
 	}
+
 	
 	
 
