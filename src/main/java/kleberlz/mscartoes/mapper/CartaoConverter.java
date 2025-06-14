@@ -13,7 +13,7 @@ public class CartaoConverter {
 		cartao.setNome(dto.getNome());
 		cartao.setBandeira(dto.getBandeira());
 		cartao.setRenda(dto.getRenda());
-		cartao.setLimiteBasico(dto.getLimite());
+		cartao.setLimite(dto.getLimite());
 		return cartao;
 	}
 	
@@ -22,7 +22,7 @@ public class CartaoConverter {
 				entidade.getNome(),
 				entidade.getBandeira(),
 				entidade.getRenda(),
-				entidade.getLimiteBasico());
+				entidade.getLimite());
 	}
 
 }

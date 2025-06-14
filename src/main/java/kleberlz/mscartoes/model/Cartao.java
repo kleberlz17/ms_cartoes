@@ -21,13 +21,13 @@ public class Cartao {
 	
 	private BigDecimal renda;
 	
-	private BigDecimal limiteBasico;
+	private BigDecimal limite;
 	
-	public Cartao(String nome, String bandeira, BigDecimal renda, BigDecimal limiteBasico) {
+	public Cartao(String nome, String bandeira, BigDecimal renda, BigDecimal limite) {
 		this.nome = nome;
 		this.bandeira = bandeira;
 		this.renda = renda;
-		this.limiteBasico = limiteBasico;
+		this.limite = limite;
 	}
 	
 	public Cartao() {
@@ -66,19 +66,21 @@ public class Cartao {
 		this.renda = renda;
 	}
 
-	public BigDecimal getLimiteBasico() {
-		return limiteBasico;
+	public BigDecimal getLimite() {
+		return limite;
 	}
 
-	public void setLimiteBasico(BigDecimal limiteBasico) {
-		this.limiteBasico = limiteBasico;
+	public void setLimite(BigDecimal limite) {
+		this.limite = limite;
 	}
 
 	@Override
 	public String toString() {
-		return "Cartao [id=" + id + ", nome=" + nome + ", bandeira=" + bandeira + ", renda=" + renda + ", limiteBasico="
-				+ limiteBasico + "]";
+		return "Cartao [id=" + id + ", nome=" + nome + ", bandeira=" + bandeira + ", renda=" + renda + ", limite="
+				+ limite + "]";
 	}
+
+	
 
 	
 	
