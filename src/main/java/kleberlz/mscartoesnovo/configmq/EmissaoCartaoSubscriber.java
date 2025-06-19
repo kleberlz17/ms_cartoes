@@ -9,17 +9,19 @@ import kleberlz.mscartoesnovo.model.ClienteCartao;
 import kleberlz.mscartoesnovo.repository.CartaoRepository;
 import kleberlz.mscartoesnovo.repository.ClienteCartaoRepository;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import modelmq.DadosSolicitacaoEmissaoCartao;
 
 @Component
 @RequiredArgsConstructor
+@Slf4j
 public class EmissaoCartaoSubscriber {
 	
 	private final CartaoRepository cartaoRepository;
 	private final ClienteCartaoRepository clienteCartaoRepository;
 
 	@RabbitListener(queues = "${mq.queues.emissao-cartoes}")
-	public void receberSolicitacaoEmissao(@Payload String payload) {
+	public void receberSolicitacaoEmissao(@Payload String payload) { //Espera receber um object
 		try {
 			
 			var mapper = new ObjectMapper();
@@ -35,7 +37,7 @@ public class EmissaoCartaoSubscriber {
 			
 			
 		} catch (Exception ex) {
-			ex.printStackTrace();
+			log.error("Erro ao receber solicitação de emissão de cartão: {}", ex.getMessage());
 		}
 		
 		
