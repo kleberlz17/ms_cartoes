@@ -2,7 +2,7 @@ spring:
   application:
     name: mscartoes
   rabbitmq:
-    host: kleberlzms-rabbitmq
+    host: ${RABBIT_SERVER}
     port: 5672
     username: ${RABBIT_USERNAME}
     password: ${RABBIT_PASSWORD}
