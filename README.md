@@ -18,6 +18,20 @@ As imagens dockerizadas dos serviços estão disponíveis no meu Docker Hub:
 
 ---
 
+## 🔗 Repositórios GitHub
+
+Os repositórios dos microsserviços utilizados neste projeto estão disponíveis no meu GitHub:
+
+| Serviço                 | Link para o Repositório                                                                                                                        |
+|-------------------------|------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Clientes**            | [ms_clientes](https://github.com/kleberlz17/ms_clientes)                                                                                      |
+| **Cartões**             | [ms_cartoes](https://github.com/kleberlz17/ms_cartoes)                                                                                        |
+| **Avaliador de Crédito**| [ms_avaliador_credito](https://github.com/kleberlz17/ms_avaliador_credito)                                                                    |
+| **Gateway**             | [ms_cloud_gateway](https://github.com/kleberlz17/ms_cloud_gateway)                                                                            |
+| **Eureka Server**       | [eureka_server](https://github.com/kleberlz17/eureka_server)                                                                                  |
+
+---
+
 ## ⚙️ Tecnologias Utilizadas
 
 - **Java 21**
